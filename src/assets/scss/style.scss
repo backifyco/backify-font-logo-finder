@@ -19,9 +19,12 @@
   margin: 0;
 }
 
+* {
+  @include transition(colors, $ease-in-out-sine, 5s);
+}
+
 html {
   background: var(--color-bg-primary);
-  @include transition(colors, $ease-in-out-sine, $duration-long);
 }
 
 body {
