@@ -1,0 +1,42 @@
+@use 'variables' as *;
+@use 'mixins' as *;
+
+:root { // Light
+  --color-text-primary: #{$color-dark};
+  --color-text-secondary: #{$color-gray-200};
+  --color-bg-primary: #{$color-gray-100};
+}
+
+.dark {
+  --color-text-primary: #{$color-white};
+  --color-text-secondary: #{$color-gray-200};
+  --color-bg-primary: #{$color-dark};
+}
+
+*, *::before, *::after {
+  box-sizing: border-box;
+  position: relative;
+  margin: 0;
+}
+
+html {
+  background: var(--color-bg-primary);
+  @include transition(colors, $ease-in-out-sine, $duration-long);
+}
+
+body {
+  @include typo;
+  color: var(--color-text-primary);
+  min-height: 100vh;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+
+  &:before {
+    @include absolute;
+    @include size;
+    @include mask-image($color-fade-1, $color-fade-3);
+    background-image: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32' width='32' height='32' fill='none' stroke='#{rgba($color-gray-200, $color-fade-2)}'><path d='M0 .5H31.5V32'/></svg>");
+    background-position: 10px 10px;
+  }
+}

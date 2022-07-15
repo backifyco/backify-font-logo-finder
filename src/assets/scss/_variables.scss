@@ -1,0 +1,75 @@
+/*
+*
+* Declaration of all colors
+*
+*/
+
+/*
+* Grayscale
+*/
+$color-white: #fff !default;
+$color-gray-100: #f8f9fa !default;
+$color-gray-200: #708090 !default;
+$color-gray-300: #100f15 !default;
+$color-dark: #06050b !default;
+
+/*
+* Transparency
+*/
+$color-fade-1: 0.15 !default;
+$color-fade-2: 0.3 !default;
+$color-fade-3: 0.5 !default;
+
+/*
+*
+* Declaration of all font types
+*
+*/
+
+/*
+* Family
+*/
+$font-family-primary: "Space Grotesk" !default;
+
+/*
+* Size
+*/
+$font-size-100: 0.875rem !default; // 14px
+$font-size-200: 1rem !default; // 16px
+$font-size-300: 1.125rem !default; // 18px
+$font-size-400: 1.25rem !default; // 20px
+$font-size-500: 1.375rem !default; // 22px
+
+$font-size-default: $font-size-200 !default;
+
+/*
+* Weight
+*/
+$font-weight-normal: 400 !default;
+$font-weight-semi-bold: 600 !default;
+$font-weight-bold: 700 !default;
+
+/*
+* Height
+*/
+$font-height-normal: 1em !default;
+
+/*
+*
+* Declaration of all animations
+*
+*/
+
+/*
+* Duration
+*/
+$duration-short: 0.2s !default;
+$duration-long: 0.5s !default;
+$duration-medium: calc((#{$duration-short} + #{$duration-long}) / 2) !default; // 0.35s
+
+/*
+* Timing
+*/
+$ease-in-sine: cubic-bezier(0.12, 0, 0.39, 0) !default;
+$ease-out-sine: cubic-bezier(0.61, 1, 0.88, 1) !default;
+$ease-in-out-sine: cubic-bezier(0.37, 0, 0.63, 1) !default;

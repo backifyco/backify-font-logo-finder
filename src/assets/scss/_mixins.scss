@@ -1,0 +1,53 @@
+@use 'variables' as *;
+
+@mixin typo(
+  $size: $font-size-default,
+  $weight: $font-weight-normal,
+  $family: $font-family-primary,
+  $height: $font-height-normal,
+  $align: left
+) {
+  font-size: $size;
+  font-weight: $weight;
+  font-family: $family;
+  line-height: $height;
+  text-align: $align;
+}
+
+@mixin color($text, $bg) {
+  color: $text;
+  background: $bg;
+}
+
+@mixin transition($property, $timing, $duration) {
+  @if ($property == all) {
+    transition-property: all;
+  } @else if ($property == colors) {
+    transition-property: color, background-color, border-color, text-decoration-color, fill, stroke;
+  }
+
+  transition-timing-function: $timing;
+  transition-duration: $duration;
+}
+
+@mixin mask-image($fade-1, $fade-2) {
+  mask-image: linear-gradient(0deg, rgba(white, $fade-1), rgba(white, $fade-2));
+  -webkit-mask-image: linear-gradient(0deg, rgba(white, $fade-1), rgba(white, $fade-2));
+}
+
+@mixin absolute() {
+  content: "";
+  position: absolute;
+}
+
+@mixin size($size: 100%) {
+  width: $size;
+  height: $size;
+}
+
+@mixin font-face($font, $family: $font-family-primary) {
+  @font-face {
+    font-family: $family;
+    src: local($family), url("../fonts/#{$font}.ttf") format("truetype");
+  }
+}
