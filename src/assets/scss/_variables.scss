@@ -28,6 +28,17 @@ $color-fade-3: 0.5 !default;
 
 /*
 *
+* Declaration of all sizes
+*
+*/
+
+/*
+* Family
+*/
+$size-border: 1px !default;
+
+/*
+*
 * Declaration of all font types
 *
 */
@@ -36,6 +47,7 @@ $color-fade-3: 0.5 !default;
 * Family
 */
 $font-family-primary: "Space Grotesk" !default;
+$font-family-code: "JetBrains Mono", monospace !default;
 
 /*
 * Size
@@ -79,3 +91,11 @@ $duration-medium: calc((#{$duration-short} + #{$duration-long}) / 2) !default; /
 $ease-in-sine: cubic-bezier(0.12, 0, 0.39, 0) !default;
 $ease-out-sine: cubic-bezier(0.61, 1, 0.88, 1) !default;
 $ease-in-out-sine: cubic-bezier(0.37, 0, 0.63, 1) !default;
+
+/*
+*
+* Declaration of all breakpoints
+*
+*/
+
+$breakpoints: ('sm': 640px, 'md': 768px, 'lg': 1024px, 'xl': 1280px, '2xl': 1536px) !default;

@@ -1,16 +1,23 @@
-import { fileURLToPath, URL } from 'url'
+import {fileURLToPath, URL} from 'url'
 
-import { defineConfig } from 'vite'
+import {defineConfig} from 'vite'
 import vue from '@vitejs/plugin-vue'
 
-import svgLoader from 'vite-svg-loader'
-
-// https://vitejs.dev/config/
 export default defineConfig({
-  plugins: [vue(), svgLoader()],
-  resolve: {
-    alias: {
-      '@': fileURLToPath(new URL('./src', import.meta.url))
+    plugins: [vue()],
+    resolve: {
+        alias: {
+            '@': fileURLToPath(new URL('./src', import.meta.url)),
+            '@fonts': fileURLToPath(new URL('./public/fonts', import.meta.url))
+        }
+    },
+    css: {
+        preprocessorOptions: {
+            scss: {
+                additionalData: `
+                    @use 'remixicon/fonts/remixicon.css';
+                `
+            }
+        }
     }
-  }
 })

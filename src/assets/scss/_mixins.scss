@@ -35,9 +35,29 @@
   -webkit-mask-image: linear-gradient(0deg, rgba(white, $fade-1), rgba(white, $fade-2));
 }
 
-@mixin absolute() {
+@mixin absolute($top: 0, $right: 0, $bottom: 0, $left: 0) {
   content: "";
   position: absolute;
+  top: $top;
+  right: $right;
+  bottom: $bottom;
+  left: $left;
+}
+
+@mixin border($color, $side, $size: $size-border, $style: solid) {
+  @if ($side) {
+    border-#{$side}: $size $style $color;
+  } @else {
+    border: $size $style $color;
+  }
+}
+
+@mixin flex($justify, $align: center, $direction: row, $inline: false, $wrap: no-wrap) {
+  display: if($inline, inline-flex, flex);
+  justify-content: $justify;
+  align-items: $align;
+  flex-direction: $direction;
+  flex-wrap: $wrap;
 }
 
 @mixin size($size: 100%) {
@@ -45,9 +65,23 @@
   height: $size;
 }
 
-@mixin font-face($font, $family: $font-family-primary) {
+@mixin img($fit: contain, $pos: center) {
+  object-fit: $fit;
+  object-position: $pos;
+}
+
+@mixin font-face($font, $weight, $family: $font-family-primary) {
   @font-face {
     font-family: $family;
-    src: local($family), url("../fonts/#{$font}.ttf") format("truetype");
+    font-weight: $weight;
+    src: local($family), url("../fonts/#{$font}.woff") format("woff");
+  }
+}
+
+@mixin breakpoint($breakpoint) {
+  @if map-has-key($breakpoints, $breakpoint) {
+    @media (min-width: map-get($breakpoints, $breakpoint)) {
+      @content;
+    }
   }
 }

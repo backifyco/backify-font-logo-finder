@@ -1,0 +1,8 @@
+@use 'variables' as *;
+@use 'mixins' as *;
+
+$fonts: ('JetBrainsMono-Regular': $font-weight-normal, 'SpaceGrotesk-Regular': $font-weight-normal, 'SpaceGrotesk-SemiBold': $font-weight-semi-bold, 'SpaceGrotesk-Bold': $font-weight-bold);
+
+@each $font, $weight in $fonts {
+  @include font-face($font, $weight);
+}

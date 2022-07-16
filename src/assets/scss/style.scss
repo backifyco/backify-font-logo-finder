@@ -1,16 +1,19 @@
 @use 'variables' as *;
 @use 'mixins' as *;
+@use 'fonts' as *;
 
 :root { // Light
   --color-text-primary: #{$color-dark};
   --color-text-secondary: #{$color-gray-200};
   --color-bg-primary: #{$color-gray-100};
+  --color-bg-secondary: #{$color-white};
 }
 
 .dark {
   --color-text-primary: #{$color-white};
   --color-text-secondary: #{$color-gray-200};
   --color-bg-primary: #{$color-dark};
+  --color-bg-secondary: #{$color-gray-300};
 }
 
 *, *::before, *::after {
@@ -20,7 +23,7 @@
 }
 
 * {
-  @include transition(colors, $ease-in-out-sine, 5s);
+  @include transition(colors, $ease-in-out-sine, $duration-short);
 }
 
 html {
@@ -38,8 +41,71 @@ body {
   &:before {
     @include absolute;
     @include size;
-    @include mask-image($color-fade-1, $color-fade-3);
+    @include mask-image($color-fade-1, $color-fade-2);
     background-image: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32' width='32' height='32' fill='none' stroke='#{rgba($color-gray-200, $color-fade-2)}'><path d='M0 .5H31.5V32'/></svg>");
     background-position: 10px 10px;
+  }
+}
+
+.container > * {
+  max-width: 90rem;
+  margin: 0 auto;
+  padding: 0 1rem;
+
+  @include breakpoint('sm') {
+    padding: 0 1.5rem;
+  }
+
+  @include breakpoint('md') {
+    padding: 0 2rem;
+  }
+}
+
+button {
+  @include typo($weight: $font-weight-bold, $align: center);
+  background: linear-gradient(135deg, $color-turquoise, $color-lime);
+  color: $color-dark;
+  padding: 1.125rem 1.5rem;
+  cursor: pointer;
+}
+
+input {
+  $height: 4em;
+
+  @include color(var(--color-text-primary), var(--color-bg-secondary));
+  @include typo($weight: $font-weight-semi-bold);
+  display: block;
+  border: none;
+  height: $height;
+  padding: 0.625rem 1.25rem;
+
+  &:focus {
+    outline: none;
+  }
+
+  &[type="number"] {
+    width: 100px;
+
+    &::-webkit-inner-spin-button, &::-webkit-outer-spin-button {
+      -webkit-appearance: none;
+    }
+  }
+
+  &[type="file"] { // Hide text field for file
+    opacity: 0;
+    overflow: hidden;
+    position: absolute;
+    z-index: -1;
+    padding: 0;
+    height: 0;
+  }
+
+  &[type="file"] + label {
+    @extend button;
+    line-height: $height;
+    height: $height;
+    padding-top: 0;
+    padding-bottom: 0;
+    display: inline-block;
   }
 }
