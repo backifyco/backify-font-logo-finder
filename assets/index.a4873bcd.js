@@ -2989,38 +2989,38 @@ const Nc = e => (li("data-v-3523515e"), e = e(), ci(), e), jc = {class: "contain
     Vc = {class: "text-block"}, kc = {class: "headline"}, Kc = {class: "logo"}, Wc = Ss({
         __name: "App", setup(e) {
             const t = Me(), n = Me(), r = Me(12), s = at(() => r.value), o = Me("Backify"), i = at(() => o.value), l = {
-                "../public/fonts/Acumin-Bold.otf": () => J(() => import("/backify-font-logo-finder/assets/Acumin-Bold.5ca6bcad.js"), []),
-                "../public/fonts/Aeonik-Bold.otf": () => J(() => import("/backify-font-logo-finder/assets/Aeonik-Bold.d574d4fe.js"), []),
-                "../public/fonts/AktivGrotesk-Bold.otf": () => J(() => import("/backify-font-logo-finder/assets/AktivGrotesk-Bold.254e0c5c.js"), []),
-                "../public/fonts/Avenir-Bold.otf": () => J(() => import("/backify-font-logo-finder/assets/Avenir-Bold.4c484e47.js"), []),
-                "../public/fonts/Averta-Bold.otf": () => J(() => import("/backify-font-logo-finder/assets/Averta-Bold.7312be2d.js"), []),
-                "../public/fonts/Biennale-Bold.otf": () => J(() => import("/backify-font-logo-finder/assets/Biennale-Bold.8bac8c10.js"), []),
-                "../public/fonts/Cera-Bold.otf": () => J(() => import("/backify-font-logo-finder/assets/Cera-Bold.ccea2f5d.js"), []),
-                "../public/fonts/Circular-Bold.otf": () => J(() => import("/backify-font-logo-finder/assets/Circular-Bold.992cd255.js"), []),
-                "../public/fonts/Familiar-Bold.otf": () => J(() => import("/backify-font-logo-finder/assets/Familiar-Bold.db191bf5.js"), []),
-                "../public/fonts/Forma-Bold.otf": () => J(() => import("/backify-font-logo-finder/assets/Forma-Bold.e72a9e87.js"), []),
-                "../public/fonts/Futura-Bold.otf": () => J(() => import("/backify-font-logo-finder/assets/Futura-Bold.d1c310be.js"), []),
-                "../public/fonts/Gilroy-Bold.otf": () => J(() => import("/backify-font-logo-finder/assets/Gilroy-Bold.6f8736f3.js"), []),
-                "../public/fonts/Hurme-Bold.otf": () => J(() => import("/backify-font-logo-finder/assets/Hurme-Bold.2d2d0fcd.js"), []),
-                "../public/fonts/ITCAvantGarde-SemiBold.otf": () => J(() => import("/backify-font-logo-finder/assets/ITCAvantGarde-SemiBold.21c72a81.js"), []),
-                "../public/fonts/Montserrat-Bold.otf": () => J(() => import("/backify-font-logo-finder/assets/Montserrat-Bold.76b3d74d.js"), []),
-                "../public/fonts/Nexa-Bold.otf": () => J(() => import("/backify-font-logo-finder/assets/Nexa-Bold.37f4218d.js"), []),
-                "../public/fonts/Objective-Bold.otf": () => J(() => import("/backify-font-logo-finder/assets/Objective-Bold.dbb98a18.js"), []),
-                "../public/fonts/Pangram-Bold.otf": () => J(() => import("/backify-font-logo-finder/assets/Pangram-Bold.81f8fe50.js"), []),
-                "../public/fonts/SpaceGrotesk-Bold.otf": () => J(() => import("/backify-font-logo-finder/assets/SpaceGrotesk-Bold.830637b5.js"), []),
-                "../public/fonts/TitlingGothic-Medium.otf": () => J(() => import("/backify-font-logo-finder/assets/TitlingGothic-Medium.0750e8e2.js"), []),
-                "../public/fonts/Visby-Bold.otf": () => J(() => import("/backify-font-logo-finder/assets/Visby-Bold.58730283.js"), [])
+                "../fonts/Acumin-Bold.otf": () => J(() => import("./Acumin-Bold.5ca6bcad.js"), []),
+                "../fonts/Aeonik-Bold.otf": () => J(() => import("./Aeonik-Bold.d574d4fe.js"), []),
+                "../fonts/AktivGrotesk-Bold.otf": () => J(() => import("./AktivGrotesk-Bold.254e0c5c.js"), []),
+                "../fonts/Avenir-Bold.otf": () => J(() => import("./Avenir-Bold.4c484e47.js"), []),
+                "../fonts/Averta-Bold.otf": () => J(() => import("./Averta-Bold.7312be2d.js"), []),
+                "../fonts/Biennale-Bold.otf": () => J(() => import("./Biennale-Bold.8bac8c10.js"), []),
+                "../fonts/Cera-Bold.otf": () => J(() => import("./Cera-Bold.ccea2f5d.js"), []),
+                "../fonts/Circular-Bold.otf": () => J(() => import("./Circular-Bold.992cd255.js"), []),
+                "../fonts/Familiar-Bold.otf": () => J(() => import("./Familiar-Bold.db191bf5.js"), []),
+                "../fonts/Forma-Bold.otf": () => J(() => import("./Forma-Bold.e72a9e87.js"), []),
+                "../fonts/Futura-Bold.otf": () => J(() => import("./Futura-Bold.d1c310be.js"), []),
+                "../fonts/Gilroy-Bold.otf": () => J(() => import("./Gilroy-Bold.6f8736f3.js"), []),
+                "../fonts/Hurme-Bold.otf": () => J(() => import("./Hurme-Bold.2d2d0fcd.js"), []),
+                "../fonts/ITCAvantGarde-SemiBold.otf": () => J(() => import("./ITCAvantGarde-SemiBold.21c72a81.js"), []),
+                "../fonts/Montserrat-Bold.otf": () => J(() => import("./Montserrat-Bold.76b3d74d.js"), []),
+                "../fonts/Nexa-Bold.otf": () => J(() => import("./Nexa-Bold.37f4218d.js"), []),
+                "../fonts/Objective-Bold.otf": () => J(() => import("./Objective-Bold.dbb98a18.js"), []),
+                "../fonts/Pangram-Bold.otf": () => J(() => import("./Pangram-Bold.81f8fe50.js"), []),
+                "../fonts/SpaceGrotesk-Bold.otf": () => J(() => import("./SpaceGrotesk-Bold.830637b5.js"), []),
+                "../fonts/TitlingGothic-Medium.otf": () => J(() => import("./TitlingGothic-Medium.0750e8e2.js"), []),
+                "../fonts/Visby-Bold.otf": () => J(() => import("./Visby-Bold.58730283.js"), [])
             }, f = /[^/]+(?=-)/g;
             let a = [];
             for (const b in l) {
-                const m = b.substring(25).match(f)[0];
+                const m = b.match(f)[0];
                 a.push(m);
                 const x = new FontFace(m, `url('${b}')`);
                 x.load(), document.fonts.add(x)
             }
             sn(() => {
                 n.value.forEach(b => {
-                    b.src = "/backify-font-logo-finder/favicon.svg"
+                    b.src = "/favicon.svg"
                 })
             });
 
