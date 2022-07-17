@@ -3013,7 +3013,7 @@ const Nc = e => (li("data-v-3523515e"), e = e(), ci(), e), jc = {class: "contain
             }, f = /[^/]+(?=-)/g;
             let a = [];
             for (const b in l) {
-                const m = b.match(f)[0];
+                const m = b.match(f)[1];
                 a.push(m);
                 const x = new FontFace(m, `url('${b}')`);
                 x.load(), document.fonts.add(x)
